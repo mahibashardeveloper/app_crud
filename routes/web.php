@@ -16,3 +16,4 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/admin/', [AdminController::class, 'index'])->where('any', '.*')->name('lvs.admin');
 Route::get('/admin/{any}', [AdminController::class, 'index'])->where('any', '.*')->name('lvs.admin.any');
+Route::get('/', function (){ return redirect()->route('lvs.admin.any','dashboard'); });

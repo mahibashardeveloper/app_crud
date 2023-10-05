@@ -33,7 +33,6 @@ class Product extends Authenticatable
         'created_at',
         'updated_at'
     ];
-
     public function category_info(){
         return $this->hasOne(Category::class, 'id', 'category_id');
     }
